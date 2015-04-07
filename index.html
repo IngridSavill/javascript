@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Javascript</title>
+
+</head>
+
+<body>
+
+	<script>
+
+			// This is an object
+
+			// var obj = {
+			// 	firstName: "Ingrid",
+			// 	lastName: "Savill"
+
+			// };
+
+			// // dot notation:
+
+			// obj.age = "46";
+			// obj["nickname"] = "Saveloy";
+
+			// console.log(obj.lastName);
+			// alert("Alert");
+
+			// var mrswhat = "Savill";
+			// console.log(obj.lastName);
+
+
+			// //object methods
+
+			// Object.defineProperty (obj, "country", 
+			// { value: "NZ"} );
+
+			// console.log(obj.country);
+
+			// Object.defineProperties ( obj, {
+			// 	faveFood: {value: "Pizza"},
+			// 	faveColor: {value: "Green"}
+
+			// });
+
+			// //console.log(obj.faveFood);
+
+			//AllBlacks
+
+			var abJonah = {
+				team: "Allblacks",
+				firstName: "Jonah",
+				lastName: "Lomu",
+				sayName: function (){
+					return "My Name is " + this.firstName + " " + this.lastName + ".";
+
+				}
+			};
+
+			var abFitzy = Object.create(abJonah, {
+				firstName: {value: "Sean"},
+				lastName: {value: "Fitzpatrick"},
+				profession: {value: "Rugby"},
+				captainsSpeech: {
+					value: function(person){
+					return "What a game " + this.profession + " was the winner on the day. God bless the " + person.team + ".";
+
+
+					}
+
+
+				}
+
+			});
+
+
+			//Invoke
+
+			alert(abJonah.sayName());
+
+			alert(abFitzy.captainsSpeech(abFitzy));
+
+			console.log(abFitzy.captainsSpeech(abFitzy));
+
+			console.log(abJonah.sayName());
+
+			var docWrite
+
+
+
+
+
+	</script>
+	
+</body>
+</html>
